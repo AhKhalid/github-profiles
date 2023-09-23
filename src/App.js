@@ -1,23 +1,31 @@
 import logo from './logo.svg';
-import './App.css';
+import InputForm from './components/InputForm';
+import Profiles from './components/Profiles';
+import React from 'react';
+import axios from 'axios'
 
 function App() {
+
+  const baseURL = 'https://api.github.com/users';
+
+  const [profiles, setProfiles] = React.useState([])
+  const getData = async (profileName) => {
+    
+    if(profileName == null || profileName == '') return
+
+    const res = await axios.get(`${baseURL}/${profileName}`).catch(err => {
+      console.log(err)
+      return
+    })
+
+    if(res?.data != null)
+    setProfiles([...profiles, res.data])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <InputForm onClick={getData} />
+      <Profiles profiles={profiles} />
     </div>
   );
 }

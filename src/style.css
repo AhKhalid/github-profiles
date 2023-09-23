@@ -1,0 +1,85 @@
+body {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.container {
+  max-width: 780px;
+  margin: 2rem auto;
+}
+.input-form {
+  display: flex;
+  justify-content: center;
+}
+.form-control {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #8495984d;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ }
+ .btn-primary {
+  color: #fff;
+  background-color: #2acafac2;
+  border-color: #2acafac2;
+}
+ .btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #2acafac2;
+  border: 1px solid #ced4da;
+}
+.profiles {
+  margin: 0 auto;
+}
+.profile {
+  display: flex;
+  background-color: #8495984d;
+  border-right: 10px solid #2acafac2;
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  color: #2acafac2;
+}
+.profile:hover {
+  opacity: 70%;
+}
+.profile-img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #2acafac2;
+}
+.profile-details {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile-company {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
