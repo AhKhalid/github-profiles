@@ -3,10 +3,11 @@ import InputForm from './components/InputForm';
 import Profiles from './components/Profiles';
 import React from 'react';
 import axios from 'axios'
+import config from './app.settings.json'
 
 function App() {
 
-  const baseURL = 'https://api.github.com/users';
+  const baseURL =  config.BaseURL;
 
   const [profiles, setProfiles] = React.useState([])
   const getData = async (profileName) => {
